@@ -22,9 +22,7 @@ def loaddata(ticker):
     df = yf.download(ticker,start,today)
     df.reset_index(inplace = True)
     return df
-data_state = st.text("Loading Data")
 df = loaddata(selected_stocks)
-data_state.text("Loading Data...done")
 st.subheader("Raw data")
 st.write(df.tail(5))
 def plot_raw_data_graph():
@@ -82,7 +80,3 @@ def plot_prophet():
     fig.layout.update(title_text = "Time Series data (Forecast)",xaxis_rangeslider_visible=True)
     st.plotly_chart(fig)
 plot_prophet()
-
-st.write("forecast component")
-fig2 = m.plot_components(forecast_prophet)
-st.plotly_chart(fig2)
