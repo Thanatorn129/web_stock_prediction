@@ -13,7 +13,7 @@ from  pandas import to_datetime
 start = "2020-01-01"
 today = date.today().strftime("%Y-%m-%d")
 st.title("Stock price prediction")
-stock = ("BTC-USD","NFLX")
+stock = ("BTC-USD","NFLX","TSLA","GC=F")
 selected_stocks = st.selectbox("Select dataset for Prediction",stock)
 n_years = st.slider("Years of prediction",1,5)
 period = n_years * 365
