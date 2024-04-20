@@ -7,7 +7,7 @@ import prophet.plot as plot_plotly
 from plotly import graph_objs as go
 import pmdarima as pm
 from pmdarima.arima import auto_arima
-from statsmodels.tsa.arima.model import ARIMA
+#from statsmodels.tsa.arima.model import ARIMA
 from  pandas import to_datetime
 
 start = "2020-01-01"
